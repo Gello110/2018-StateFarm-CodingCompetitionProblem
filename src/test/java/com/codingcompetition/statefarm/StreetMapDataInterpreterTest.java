@@ -23,7 +23,7 @@ public class StreetMapDataInterpreterTest {
     @Before
     public void setup() throws Exception {
         smallMetro = new StreetMapDataInterpreter("/small-metro.xml");
-        largeMetro = new StreetMapDataInterpreter("/large-metro.xml");
+        //largeMetro = new StreetMapDataInterpreter("/large-metro.xml");
     }
 
     @Test
@@ -50,6 +50,7 @@ public class StreetMapDataInterpreterTest {
 
     }
 
+    @Test
     public void returnsEmptyListWhenNullPassedIn() throws Exception {
         SearchCriteria nullCriteria = null;
         List<PointOfInterest> points = smallMetro.interpret(nullCriteria);
